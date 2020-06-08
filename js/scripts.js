@@ -1,18 +1,27 @@
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
-    const person1Input = $("input#person1").val();
-    const person2Input = $("input#person2").val();
-    const animalInput= $("input#animal").val();
-    const exclamationInput = $("input#exclamation").val();
-    const verbInput = $("input#verb").val();
+    const numberInput = $("input#number").val();
+    const nameInput = $("input#name").val();
+    const pronounInput= $("input#pronoun").val();
     const nounInput = $("input#noun").val();
+    const activityInput = $("input#activity").val();
+    const verb2Input = $("input#verb2").val();
+    const adjectiveInput = $("input#adjective").val();
 
-    $(".person1").text(person1Input);
-    $(".person2").text(person2Input);
-    $(".animal").text(animalInput);
-    $(".exclamation").text(exclamationInput);
-    $(".verb").text(verbInput);
-    $(".noun").text(nounInput);
+    const theInputs = [numberInput, nameInput, pronounInput, nounInput, activityInput, verb2Input, adjectiveInput];
+    theInputs.forEach(function(theInput) {
+      $(".form-control").text(theInput);
+    });
+
+    /*
+    $("#numberspan").text(numberInput);
+    $("#namespan").text(nameInput);
+    $("#pronounspan").text(pronounInput);
+    $("#nounspan").text(nounInput);
+    $("#activityspan").text(activityInput);
+    $("#verb2span").text(verb2Input);
+    $("#adjectivespan").text(adjectiveInput);
+    */
 
     $("#story").show();
 

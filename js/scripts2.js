@@ -1,6 +1,8 @@
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
+    event.preventDefault();
     const numberInput = $("input#number").val();
+    //console.log(numberInput);
     const nameInput = $("input#name").val();
     const pronounInput = $("input#pronoun").val();
     const nounInput = $("input#noun").val();
@@ -19,7 +21,7 @@ $(document).ready(function() {
 
     $("#story").show();
 
-    event.preventDefault();
+    
     
   });
 });
